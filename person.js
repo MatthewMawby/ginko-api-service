@@ -8,7 +8,7 @@ const utils = require("./utils")
 // GET method for person API
 function getPerson(domain, params) {
   var route = domain + "/person" + utils.queryString(params)
-  utils.getReq(route)
+  return utils.getReq(route)
 }
 
 module.exports.getPerson = getPerson
