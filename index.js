@@ -15,8 +15,8 @@ module.exports = (function(){
     domain = domain;
   }
 
-  function getPerson(Id){
-    return personModule.getPerson(domain, Id)
+  function getPerson(params){
+    return personModule.getPerson(domain, params)
   }
 
   return {
