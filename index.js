@@ -6,6 +6,7 @@ const userModule = require("./user")
 const personModule = require("./person")
 const relationModule = require("./relation")
 const pictureModule = require("./picture")
+const tagModule = require("./tag")
 
 module.exports = (function(){
 
@@ -15,15 +16,15 @@ module.exports = (function(){
     domain = domain;
   }
 
-  function getPerson(params){
+  function getPerson(params) {
     return personModule.getPerson(domain, params)
   }
 
-  function getUser(params){
+  function getUser(params) {
     return userModule.getUser(domain, params)
   }
 
-  function getPicture(params){
+  function getPicture(params) {
     return pictureModule.getPicture(domain, params)
   }
 
@@ -31,11 +32,16 @@ module.exports = (function(){
     return relationModule.getRelation(domain, params)
   }
 
+  function getTag(params) {
+    return tagModule.getTag(domain, params)
+  }
+
   return {
     setDomain: setDomain,
     getPerson: getPerson,
     getUser: getUser,
     getPicture: getPicture,
-    getRelation: getRelation
+    getRelation: getRelation,
+    getTag: getTag
   }
 })();
