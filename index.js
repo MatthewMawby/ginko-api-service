@@ -19,8 +19,23 @@ module.exports = (function(){
     return personModule.getPerson(domain, params)
   }
 
+  function getUser(params){
+    return userModule.getUser(domain, params)
+  }
+
+  function getPicture(params){
+    return pictureModule.getPicture(domain, params)
+  }
+
+  function getRelation(params) {
+    return relationModule.getRelation(domain, params)
+  }
+
   return {
     setDomain: setDomain,
-    getPerson: getPerson
+    getPerson: getPerson,
+    getUser: getUser,
+    getPicture: getPicture,
+    getRelation: getRelation
   }
 })();
